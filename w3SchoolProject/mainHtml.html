@@ -1,0 +1,99 @@
+<head>
+     <style>
+		  * {
+			    box-sizing: border-box;
+          }
+          body {
+				background-color: #444444;
+          }
+          #topHolder {
+				margin: 0 auto;
+				height: 660px;
+				width: 600px;
+				background-color: #222222;
+				position: relative;
+          }
+          #inputHolder {
+				position: relative;
+				height: 130px;
+				width: 600px;
+				background-color: #666666;
+          }
+          #theTitle {
+				color: #ffffff;
+				font-family: monospace;
+				text-align: center;
+          }
+          #theInput {
+				border: none;
+				height: 50px;
+				width: 300px;
+				position: absolute;
+				left: 100;
+				top: 50;
+				font-family: monospace;
+				font-size: 20px;
+				padding: 10px;
+          }
+		  #addBtn {
+				background-color: #777777;
+				height: 50px;
+				width: 100px;
+				position: absolute;
+				top: 50px;
+				left: 400px;
+				border: none;
+				font-family: monospace;
+				font-size: 20px;
+				color: #ffffff;
+		  }
+		  #bottomHolder {
+				position: absolute;
+				bottom: 0;
+				background-color: #666666;
+				width: 600px;
+				height: 520px;
+		  }
+		  ul {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+		  }
+		  ul li {
+			cursor: pointer;
+			position: relative;
+			padding: 12px 8px 12px 40px;
+			background: #eee;
+			font-size: 18px;
+			transition: 0.2s;
+			
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		  }
+		  ul li:nth-child(odd) {
+			background: #cccccc;
+		  }
+		  ul li:hover {
+			color: #ffffff;
+			background: #555555;
+		  }
+		  ul li.checked {
+			text-decoration: line-through;
+		  }
+     </style>
+</head>
+<body>
+     <div id = "topHolder">
+          <div id = "inputHolder">
+               <h1 id = "theTitle">My Project in HTML, CSS, JavaScript</h1>
+               <input type = "text" id = "theInput" placeHolder = "Title...">
+			   <button onclick = "addItem()" id = "addBtn">ADD</button>
+          </div>
+		  <div id = "bottomHolder">
+				<ul id = "myUl"></ul>
+		  </div>
+     </div>
+	 <script src = "C:\Users\Intern\Desktop\html\w3SchoolProject\theActionFile.js"></script>
+</body>
