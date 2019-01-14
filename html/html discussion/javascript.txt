@@ -1,0 +1,2 @@
+seven different data type
+undefined, null, boolean, string, symbol, number, and object.

@@ -1,0 +1,8 @@
+<html>
+	<body>
+		<p id="demo"></id>
+		<script>
+			document.getElementById("demo").innerHTML = "Raymond";
+		</script>
+	</body>
+</html>

@@ -1,0 +1,74 @@
+<html>
+	<head>
+		<style>
+			#title {
+				font-family: monospace;
+				font-size: 20px;
+				text-align: center;
+			}
+			#videoHolder {
+				display: block; 
+				margin: 0 auto;
+				height: 300px;
+				width: 500px;
+			}
+			#stopbtn {
+				width: 200px;
+				height: 50px;
+				display: block;
+				margin: 5 auto;
+				font-family: monospace;
+				font-size: 17px;
+			}
+		</style>
+	</head>
+	<body>
+		<p id="title">Recording</p>
+		<video controls autoplay="autoplay" id="videoHolder" muted></video>
+		<button id="stopbtn" onclick="stopBtnFunc(this)">Stop Recording</button>
+		<script src="C:\Users\Intern\Downloads\RecordRTC (1).js"></script>
+		<script>
+		
+			var videoHolder = document.getElementById('videoHolder');
+			var recordRTC;
+			
+			if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+			 
+				function successCallback(stream) {
+					// RecordRTC usage goes here
+					videoHolder.srcObject = stream;
+					var options = {
+						mimeType: 'video/mp4', // or video/webm\;codecs=h264 or video/webm\;codecs=vp9
+						bitsPerSecond: 128000,
+						recorderType: RecordRTC.WhammyRecorder
+					};
+					recordRTC = RecordRTC(stream, options);
+					recordRTC.startRecording();
+				}
+
+				function errorCallback(error) {
+					// maybe another application is using the device
+				}
+
+				var mediaConstraints = { video: true, audio: true };
+
+				navigator.mediaDevices.getUserMedia(mediaConstraints).then(successCallback).catch(errorCallback);
+
+				function stopBtnFunc(elem) {
+					recordRTC.stopRecording(function (audioVideoWebMURL) {
+						var recordedBlob = recordRTC.getBlob();
+						recordRTC.getDataURL(function(dataURL) { });
+						recordRTC.save('C:\Users\Intern\Downloads\asd.mp4');
+					});
+				};
+			}
+			else {
+				alert("Media block");
+			}
+			var options = {
+				type: 'video',
+				frameInterval: 20 // minimum time between pushing frames to Whammy (in milliseconds)
+			};
+		</script>
+	</body>
+</html>
