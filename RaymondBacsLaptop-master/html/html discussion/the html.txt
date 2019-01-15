@@ -1,0 +1,182 @@
+Note that inside your style element, you always reference classes by putting a . in front of their names. 
+You always reference ids by putting a # in front of their names.
+
+
+						--------------------css study--------------------
+
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+
+<style>
+
+	.red-text {
+    color: red;
+  }
+
+  
+	h2 {
+    font-family: Lobster, monospace;
+  }
+
+	p {
+    font-size: 16px;
+    font-family: monospace;
+  }
+
+  
+	.thick-green-border {
+    border-color: green;
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 50%;
+  }
+
+  
+	.smaller-image {
+    width: 100px;
+  }
+
+	.silver-background {
+    background-color: silver;
+  }
+	[type='checkbox']{    margin: 10px 0px 15px 0px; }
+</style>
+
+
+<h2 class="red-text">CatPhotoApp</h2>
+
+<main>
+
+	<p class="red-text">Click here to view more <a href="#">cat photos</a>.</p>
+
+	<a href="#"><img class="smaller-image thick-green-border" src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+	<div class="silver-background">
+		<p>Things cats love:</p>
+
+			<ul>
+				<li>cat nip</li>
+				<li>laser pointers</li>
+
+				<li>lasagna</li>
+    
+			</ul>
+
+		<p>Top 3 things cats hate:</p>
+    
+			<ol>
+      
+				<li>flea treatment</li>
+      
+				<li>thunder</li>
+      
+				<li>other cats</li>
+    
+			</ol>
+  
+	</div>
+  
+  
+	<form action="/submit-cat-photo">
+    
+		<label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
+    
+		<label><input type="radio" name="indoor-outdoor"> Outdoor</label><br>
+    
+		<label><input type="checkbox" name="personality" checked> Loving</label>
+    
+		<label><input type="checkbox" name="personality"> Lazy</label>
+    
+		<label><input type="checkbox" name="personality"> Energetic</label><br>
+    
+		<input type="text" placeholder="cat photo URL" required>
+    
+		<button type="submit">Submit</button>
+  
+	</form>
+
+</main>
+
+An element's margin controls the amount of space between an element's border and surrounding elements.
+Now let's put our Cat Photo App away for a little while and learn more about styling HTML.
+--------------------------------------------------------------------------------------------------------------------------------------
+You may have already noticed this, but all HTML elements are essentially little rectangles.
+Three important properties control the space that surrounds each HTML element: padding, margin, and border.
+An element's padding controls the amount of space between the element's content and its border.
+Here, we can see that the blue box and the red box are nested within the yellow box. Note that the red box has more padding than the blue box.
+When you increase the blue box's padding, it will increase the distance(padding) between the text and the border around it.
+--------------------------------------------------------------------------------------------------------------------------------------
+Understand Absolute versus Relative Units
+
+The last several challenges all set an element's margin or padding with pixels (px). 
+Pixels are a type of length unit, which is what tells the browser how to size or space an item. 
+In addition to px, CSS has a number of different length unit options that you can use.
+
+The two main types of length units are absolute and relative. 
+Absolute units tie to physical units of length. 
+For example, in and mm refer to inches and millimeters, respectively. 
+Absolute length units approximate the actual measurement on a screen, but there are some differences depending on a screen's resolution.
+
+Relative units, such as em or rem, are relative to another length value. 
+For example, em is based on the size of an element's font. 
+If you use it to set the font-size property itself, it's relative to the parent's font-size.
+--------------------------------------------------------------------------------------------------------------------------------------
+Every HTML page has a body element.
+--------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------
+
+						--------------------css study --------------------
+
+<style>
+  
+	.injected-text {
+    margin-bottom: -25px;
+    text-align: center;
+  }
+
+  
+	.box {
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    text-align: center;
+  }
+
+  
+	.yellow-box {
+    background-color: yellow;
+    padding: 10px;
+  }
+  
+  
+	.red-box {
+    background-color: crimson;
+    color: #fff;
+    padding: 20px;
+    margin: 20px;
+  }
+
+  
+	.blue-box {
+    background-color: blue;
+    color: #fff;
+    padding: 20px;
+    margin: 10px;
+  }
+
+</style>
+
+	<h5 class="injected-text">margin</h5>
+
+
+	<div class="box yellow-box">
+  
+		<h5 class="box red-box">padding</h5>
+  
+		<h5 class="box blue-box">padding</h5>
+
+	</div>

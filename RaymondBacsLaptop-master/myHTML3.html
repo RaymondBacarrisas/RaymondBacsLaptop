@@ -1,0 +1,124 @@
+<!-------------------------------------------------------------------------------------------------------------------------------------------->
+<!--
+-->
+<!-------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
+<!-------------------------------------------------------------------------------------------------------------------------------------------->
+<!-- 									Headings elements "h1, h2, h3, h4, h5, h6"
+HTML defines six levels of headings.
+A heading element implies all the font changes, paragraph breaks before and after, and any white space necessary to render the heading. 
+The heading elements are H1, H2, H3, H4, H5, and H6 with H1 being the highest (or most important) level and H6 the least-->
+<!-------------------------------------------------------------------------------------------------------------------------------------------->
+<h2>CatPhotoApp</h2>					<!--This element tells the browser about the structure of your website. h1 elements are often used for main headings, while h2 elements are generally used for subheadings. There are also h3, h4, h5 and h6 elements to indicate different levels of subheadings.-->
+<!-------------------------------------------------------------------------------------------------------------------------------------------->
+<!--													Main element
+The <main> tag specifies the main content of a document. 
+The content inside the <main> element should be unique to the document. 
+It should not contain any content that is repeated across documents such as 
+sidebars, navigation links, copyright information, site logos, and search forms.
+-->
+<!-------------------------------------------------------------------------------------------------------------------------------------------->
+<main>									<!--The <main> tag specifies the main content of a document.-->
+  
+										<!--You can make elements into links by nesting them within an a element.-->
+										
+										<!--You can use anchor elements to link to content outside of your web page.-->
+										<!--anchor elements need a destination web address called an href attribute. They also need anchor text.-->
+<!-------------------------------------------------------------------------------------------------------------------------------------------->
+<!--													Anchor Element
+An anchor is a piece of text which marks the beginning and/or the end of a hypertext link. 
+The text between the opening tag and the closing tag is either the start or destination (or both) of a link. 
+Attributes of the anchor tag are as follows. 
+........................................................href attribute........................................................
+~~		URL
+>>		Specifies the URL of the page the link goes to
+==============================================================================================================================
+........................................................target attribute........................................................
+~~		_blank
+~~		_parent
+~~		_self
+~~		_top
+~~		framename
+>>		Specifies where to open the linked document
+==============================================================================================================================
+........................................................name attribute........................................................
+~~		section_name
+>>		Not supported in HTML5. Use the global id attribute instead.
+Specifies the name of an anchor
+==============================================================================================================================
+........................................................media attribute........................................................
+~~		media_type
+>>		Specifies the media type of the linked document
+==============================================================================================================================
+........................................................download attribute........................................................
+~~		filename
+>>		Specifies that the target will be downloaded when a user clicks on the hyperlink
+==============================================================================================================================
+........................................................type attribute........................................................
+~~		media_type
+>>		Specifies the media type of the linked document
+==============================================================================================================================
+........................................................rel attribute........................................................
+~~		alternate
+~~		author
+~~		bookmark
+~~		external
+~~		help
+~~		license
+~~		next
+~~		nofollow
+~~		noreferrer
+~~		noopener
+~~		prev
+~~		search
+~~		tag
+>>		Specifies the relationship between the current document and the linked document
+==============================================================================================================================
+........................................................ping attribute........................................................
+~~		list of URLs
+>>		Specifies a space-separated list of URLs to which, when the link is followed, 
+post requests with the body ping will be sent by the browser (in the background). 
+Typically used for tracking.	
+==============================================================================================================================
+-->
+<!-------------------------------------------------------------------------------------------------------------------------------------------->
+  <a href="http://freecatphotoapp.com" target="_blank">cat photos</a>
+										<!--put # symbol also known as hash symbol to href attribute to create dead link-->
+  <a href="#" target="_blank">cat photos</a>
+										<!--To create an internal link, you assign a link's href attribute to a hash symbol # plus the value of the id attribute for the element that you want to internally link to, usually further down the page. You then need to add the same id attribute to the element you are linking to. An id is an attribute that uniquely describes an element.-->
+  <a href="#footer">jump to bottom</a>
+										<!--nesting anchor to an image to be link-->
+  <a target="_blank" href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+										<!--You can add images to your website by using the img element, and point to a specific image's URL using the src attribute.-->
+										<!--All img elements must have an alt attribute. The text inside an alt attribute is used for screen readers to improve accessibility and is displayed if the image fails to load.-->
+<!-------------------------------------------------------------------------------------------------------------------------------------------->
+<!--				The <img> tag defines an image in an HTML page.
+					The <img> tag has two required attributes: src and alt.
+Note				Images are not technically inserted into an HTML page, images are linked to HTML pages. The <img> tag creates a holding space for the referenced image.
+					In HTML the <img> tag has no end tag.
+==============================================================================================================================
+........................................................ attribute........................................................
+~~		
+>>		
+==============================================================================================================================
+==============================================================================================================================
+........................................................ attribute........................................................
+~~		
+>>		
+==============================================================================================================================
+-->
+<!-------------------------------------------------------------------------------------------------------------------------------------------->						
+  <img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back.">
+										<!--nested anchor inside of pharagraph element-->
+  <p>Click here to view more <a target="_blank" href="http://freecatphotoapp.com"> cat photos</a>
+										<!--p elements are the preferred element for paragraph text on websites. p is short for "paragraph".-->
+  <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff. Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched. Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+  <p>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched. Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff. Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>
+  <p>Meowwww loved it, hated it, loved it, hated it yet spill litter box, scratch at owner, destroy all furniture, especially couch or lay on arms while you're using the keyboard. Missing until dinner time toy mouse squeak roll over. With tail in the air lounge in doorway. Man running from cops stops to pet cats, goes to jail.</p>
+  <p>Intently stare at the same spot poop in the plant pot but kitten is playing with dead mouse. Get video posted to internet for chasing red dot leave fur on owners clothes meow to be let out and mesmerizing birds leave fur on owners clothes or favor packaging over toy so purr for no reason. Meow to be let out play time intently sniff hand run outside as soon as door open yet destroy couch.</p>
+  
+</main>
+  
+<footer id="footer">Copyright Cat Photo App</footer>

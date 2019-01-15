@@ -1,0 +1,11 @@
+function objectResult1 {
+     let user = {
+          name: "Raymond";
+          sizes: {
+               height: 182;
+               width: 90;
+          }
+     }
+     
+         
+}

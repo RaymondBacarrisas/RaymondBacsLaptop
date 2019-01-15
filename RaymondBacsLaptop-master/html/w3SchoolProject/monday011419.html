@@ -1,0 +1,96 @@
+<html>
+	<head>
+		<style>
+			#title {
+				font-family: monospace;
+				font-size: 20px;
+				text-align: center;
+			}
+			#videoHolder {
+				display: block; 
+				margin: 0 auto;
+				height: 300px;
+				width: 500px;
+			}
+			#stopbtn {
+				width: 200px;
+				height: 50px;
+				display: block;
+				margin: 5 auto;
+				font-family: monospace;
+				font-size: 17px;
+			}
+		</style>
+	</head>
+	<body>
+		<p id="title">Recording</p>
+		<video controls autoplay="autoplay" id="videoHolder" muted></video>
+		<button id="stopbtn" onclick="stopBtnFunc(this)">Stop Recording</button>
+		<script src=".\RecordRTC (1).js"></script>
+		<script>
+		
+			var videoHolder = document.getElementById('videoHolder');	// video element
+			var videoRecordRtc;	// video RecordRTC
+			var audioRecordRtc; // audio RecordRTC
+			
+			if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+			 
+				function successCallback(stream) {
+				
+					videoHolder.srcObject = stream;	// set the video element video source
+					
+					// setting video options
+					var videoOptions = {
+						mimeType: 'video/mp4', // or video/webm\;codecs=h264 or video/webm\;codecs=vp9
+						bitsPerSecond: 128000,
+						recorderType: RecordRTC.WhammyRecorder
+					};
+					
+					var audioOptions = {
+						mimeType: 'audio/mpeg',
+						recorderType: RecordRTC.StereoAudioRecorder
+					};
+					
+					// audio recording initialization and start
+					audioRecordRtc = RecordRTC(stream, audioOptions);
+					audioRecordRtc.startRecording();
+					
+					// video recording initialization and start
+					videoRecordRtc = RecordRTC(stream, videoOptions);
+					videoRecordRtc.startRecording();
+				}
+
+				function errorCallback(error) {
+					// maybe another application is using the device
+				}
+
+				var mediaConstraints = { video: true, audio: true }; // microphone and camera
+
+				navigator.mediaDevices.getUserMedia(mediaConstraints).then(successCallback).catch(errorCallback);	// set the media devices
+
+				function stopBtnFunc(elem) {
+					// video record save
+					videoRecordRtc.stopRecording(function (VideoWebMURL) {
+						var recordedBlob = videoRecordRtc.getBlob();	// asign to blob
+						videoRecordRtc.getDataURL(function(dataURL) { });
+						videoRecordRtc.save('C:\Users\Intern\Downloads\asd.mp4');	// saving recorded video
+					});
+					
+					// audio record save
+					audioRecordRtc.stopRecording(function (AudioWebMUrl) {
+						var recordedBlob = audioRecordRtc.getBlob();
+						audioRecordRtc.getDataURL(function(dataURL) {});
+						audioRecordRtc.save('C:\Users\Intern\Downloads\asd.mp3');
+					});
+				};
+			}
+			else {
+				alert("Media block");
+			}
+			var options = {
+				type: 'video',
+				frameInterval: 20 // minimum time between pushing frames to Whammy (in milliseconds)
+			};
+		</script>
+	</body>
+</html>
