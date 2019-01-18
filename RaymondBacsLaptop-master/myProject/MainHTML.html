@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<video id="cameraHolder" autoplay muted controls></video>
+		<div id="controlHolder">
+			<button id="startStopBtn" onclick="camHolBtnFunc(this)"></button>
+			<button id="saveBtn" visibility: hidden>Save</button>
+			<select id="resolutionvalu">
+				<option value="240">240p</option>
+				<option value="360">360p</option>
+				<option value="480">480p</option>
+				<option value="720">720p</option>
+				<option value="1080">1080p</option>
+				<option value="2160">2160p</option>
+			</select>			
+			<select id="resolutionqual">
+				<option value="min">Minimum</option>
+				<option value="ave">Average</option>
+				<option value="max">Maximum</option>
+			</select>
+			<div id="indic" class="design"></div>
+		</div>
+		
+		<script src="Node.js"></script>
+		<script src="RecordRTC (1).js"></script>
+	</body>
+</html>

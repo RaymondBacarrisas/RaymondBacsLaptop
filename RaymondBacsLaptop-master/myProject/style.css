@@ -1,0 +1,76 @@
+#cameraHolder {
+	margin: 0 auto;
+	display: block;
+	border: none;
+	background-color: #555;
+	height: 300px;
+	width: 600px;
+}
+#controlHolder {
+	margin: 2 auto;
+	display: block;
+	position: relative;
+	border: none;
+	background-color: #222;
+	height: 60px;
+	width: 400px;	
+}
+#startStopBtn {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 60px;
+	height: 60px;
+	border: none;
+	background-color: #777;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 17px;
+}
+#saveBtn {
+	position: absolute;
+	width: 70px;
+	height: 20px;
+	bottom: 5px;
+	left: 230px;
+	border: none;
+	background-color: #777;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 17px;
+}
+#resolutionvalu {
+	position: absolute;
+	border: none;
+	left: 65px;
+	bottom: 5px;
+	width: 70px;
+	height: 20px;
+	background-color: #555;
+	color: #fff;
+	border-radius: 10px;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 14px;
+}
+#resolutionqual {
+	position: absolute;
+	border: none;
+	left: 140px;
+	bottom: 5px;
+	width: 85px;
+	height: 20px;
+	background-color: #555;
+	color: #fff;
+	border-radius: 10px;
+	border-radius: 10px;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 14px;
+}
+.design {
+	background-color: #aaa;
+	position: absolute;
+	border: none;
+	right: 10px;
+	top: 10px;
+	width: 40px;
+	height: 40px;
+	border-radius: 50px;
+}
