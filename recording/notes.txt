@@ -1,0 +1,10 @@
+option number 1: scan the name of browser and implement resolution
+option number 2: dont change the video height and width
+
+error handling
+webcam name
+webcam details
+put functions into different files
+changing the name and directory of downloaded file
+put all of event command into mainFunction 
+call oth function from mainFunction

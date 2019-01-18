@@ -1,0 +1,108 @@
+#cameraHolder {
+	display: block; 
+	margin: 0 auto;
+	height: 350px;
+	width: 600px;
+	background: #444444;
+}
+#camtimer {
+	position: absolute;
+	height: 30px;
+	width: 80px;
+	top: 5px;
+	left: 120px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 30px;
+	color: #fff;
+}
+#stopstartBtn {
+	position: relative;
+	height: 80px;
+	width: 80px;				
+	border: none;
+	border-style: none;
+	background: #777777;	
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 16px;
+	font-weight: bold;			
+}
+#saveBtn {
+	position: absolute;
+	bottom: 5px;
+	left: 330px;
+	height: 30px;
+	width: 70px;				
+	border: none;
+	border-style: none;
+	background: #777777;	
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 16px;
+	font-weight: bold;			
+}
+@keyframes example {
+	0%   	{background-color: #778899;}
+	50%  	{background-color: #cd0000;}   
+	100%   	{background-color: #778899;}
+}
+#controlHolder {
+	position: relative;
+	display: block; 
+	margin: 10 auto;
+	width: 550px;
+	height: 80px;
+	background: #111;
+}
+#resolution {
+	position: absolute;
+	bottom: 5px;
+	left: 85px;
+	height: 30px;
+	width: 70px;
+	font-family: Verdana, Geneva, sans-serif;
+	border: none;
+	background: #333;
+	color: #fff;
+}
+#webcam {
+	position: absolute;
+	bottom: 5px;
+	left: 265px;
+	height: 30px;
+	width: 60px;
+	font-family: Verdana, Geneva, sans-serif;
+	border: none;
+	background: #333;
+	color: #fff;
+}
+#resolutionQual {	
+	position: absolute;
+	bottom: 5px;
+	left: 160px;
+	height: 30px;
+	width: 100px;
+	font-family: Verdana, Geneva, sans-serif;
+	border: none;
+	background: #333;
+	color: #fff;
+}
+.lightIndstart {
+	position: absolute;
+	top: 20px;
+	right: 10px;
+	height: 40px;
+	width: 40px;
+	background-color: #777;
+	border-radius: 50%;
+	font-weight: bold;	
+	animation: example 1s infinite;	
+}
+.lightIndstop {
+	position: absolute;
+	top: 20px;
+	right: 10px;
+	height: 40px;
+	width: 40px;
+	background-color: #777;
+	border-radius: 50%;
+	font-weight: bold;	
+}

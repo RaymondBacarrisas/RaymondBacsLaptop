@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="recordingCSS.css"/>
+	</head>
+	<body>
+		<video id="cameraHolder" autoplay muted></video>
+		<div id="controlHolder">
+			<button id="stopstartBtn" onclick="startstopBtn(this)">Start</button>
+			<button id="saveBtn" onclick="saveRecord(this)">Save</button>
+			<label id="camtimer">00:00:00</label>
+			
+			<select id="webcam">
+			</select>
+			
+			<select id="resolution">
+			  <option value="240">240p</option>
+			  <option value="360">360p</option>
+			  <option value="480">480p</option>
+			  <option value="720">720p</option>
+			  <option value="1080">1080p</option>
+			  <option value="2160">2160p</option>
+			</select>
+			
+			<select id="resolutionQual">
+			  <option value="min">Minimum</option>
+			  <option value="ave">Average</option>
+			  <option value="max">Maximum</option>
+			</select>
+			
+			<div id="lightInd"  class="lightIndstop"></div>
+		</div>
+		
+		<script src="RecordRTC (1).js"></script>
+		<script src="resolution.js"></script>
+		<script src="mainFunction.js"></script>
+	</body>
+</html>
